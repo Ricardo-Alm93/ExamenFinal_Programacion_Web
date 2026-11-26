@@ -1,0 +1,197 @@
+
+/* Estilos generales de la página */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf1f8;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+
+main {
+    background: white;
+    width: 100%;
+    max-width: 750px;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #202c44;
+    font-size: 30px;
+}
+
+p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Menú de ejercicios */
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.menu a {
+    color: white;
+    padding: 24px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Botón morado */
+
+.menu a:first-child {
+    background: #a30eb9;
+}
+
+/* Botón verde */
+
+.menu a:last-child {
+    background: #86c71e;
+    color: #243500;
+}
+
+/* Efecto al pasar el mouse */
+
+.menu a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 600px) {
+    main {
+        padding: 25px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Formulario del ejercicio 1 */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #202c44;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.formulario input:focus {
+    outline: 2px solid #a30eb9;
+    border-color: transparent;
+}
+
+.btn-calcular {
+    background: #a30eb9;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.btn-calcular:hover {
+    background: #870c99;
+}
+
+.resultado {
+    background: #f0f9e7;
+    border: 1px solid #b5db91;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.resultado h3 {
+    color: #356a17;
+}
+
+.mensaje-error {
+    background: #fff0f0;
+    color: #a32020;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+/* Color especial para el inicio de sesión */
+
+.login .btn-calcular {
+    background: #86c71e;
+    color: #243500;
+}
+
+.login .btn-calcular:hover {
+    background: #72ad18;
+}
+
+
+
+/* Página de ayuda */
+
+.ayuda-seccion {
+    background: #f8f9fd;
+    border: 1px solid #e3e7ef;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.ayuda-seccion h2 {
+    color: #202c44;
+    font-size: 20px;
+}
+
+.ayuda-seccion a {
+    color: #8c12a3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ayuda-seccion a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ayuda - Programación Web</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+    <main>
+        <h1>Centro de ayuda</h1>
+
+        <p>
+            Esta aplicación contiene dos ejercicios
+            desarrollados con Python y Flask.
+        </p>
+
+        <section class="ayuda-seccion">
+            <h2>Ejercicio 1: Compra de pinturas</h2>
+
+            <p>
+                Ingresa tu nombre, edad y cantidad
+                de tarros de pintura.
+            </p>
+
+            <p>
+                El sistema calculará automáticamente
+                el total y el descuento correspondiente.
+            </p>
+
+            <a href="{{ url_for('ejercicio1') }}">
+                Ir al ejercicio 1
+            </a>
+        </section>
+
+        <section class="ayuda-seccion">
+            <h2>Ejercicio 2: Inicio de sesión</h2>
+
+            <p>
+                Ingresa un usuario y contraseña
+                para comprobar sus credenciales.
+            </p>
+
+            <p>
+                El sistema mostrará un mensaje
+                indicando si el acceso es correcto.
+            </p>
+
+            <a href="{{ url_for('ejercicio2') }}">
+                Ir al ejercicio 2
+            </a>
+        </section>
+
+        <p>
+            <a href="{{ url_for('inicio') }}">
+                Volver al menú principal
+            </a>
+        </p>
+    </main>
+</body>
+</html>

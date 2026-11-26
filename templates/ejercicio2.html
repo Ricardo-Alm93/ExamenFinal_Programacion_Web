@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio 2 - Inicio de sesión</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+    <main>
+        <h1>Inicio de sesión</h1>
+
+        <p>Ingresa tu usuario y contraseña para acceder.</p>
+
+        <form method="POST"
+            action="{{ url_for('ejercicio2') }}"
+            class="formulario login">
+
+            <label for="usuario">Usuario:</label>
+
+            <input type="text"
+                   id="usuario"
+                   name="usuario"
+                   placeholder="Ingresa tu usuario"
+                   value="{{ request.form.get('usuario', '') }}"
+                   required>
+
+            <label for="contrasena">Contraseña:</label>
+
+            <input type="password"
+                   id="contrasena"
+                   name="contrasena"
+                   placeholder="Ingresa tu contraseña"
+                   required>
+
+            <button type="submit" class="btn-calcular">
+                Iniciar sesión
+            </button>
+        </form>
+
+        {% if mensaje %}
+            <section class="resultado">
+                <h2>Acceso correcto</h2>
+                <p>{{ mensaje }}</p>
+            </section>
+        {% endif %}
+
+        {% if error %}
+            <div class="mensaje-error">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <p>
+            <a href="{{ url_for('inicio') }}">
+                Volver al menú
+            </a>
+        </p>
+    </main>
+</body>
+</html>
